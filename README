@@ -1,0 +1,113 @@
+
+Hiram E. Pérez | hiram.eps@gmail.com | @driverInside | http://driverinside.blogspot.com
+
+Código de la primera clase del curso de POO en PHP.  Sábado 26 de febrero 2011.
+
+
++ Traté de no poner ningún comentario en los códigos, mis apuntes los dejo en este readme.
+
++ No arreglé los espacios ni la tabulación en user.php. No afecta en el funcionamiento.
+
+
+#################################Notas#################################
+
+// Para crear una clase.
+
+<?php  
+  
+class miClase  
+{  
+     // Propiedades y
+
+     // métodos 
+}  
+   
+?>  
+
+// Para crear un objeto
+
+$objeto = new miClase();
+
+// Definiendo propiedades.
+
+class miClase  
+{  
+     public $propiedad1;  // pueden ser public, private, protected.
+
+     // métodos 
+}  
+
+// para acceder a la propiedad se utiliza el operador ' -> '
+
+echo $objeto->propiedad; 
+
+// Definiendo métodos.
+
+class miClase  
+{  
+     public $propiedad1;  
+
+     public function metodo1(){
+       
+       // pueden ser public, private, protected.
+       return 'algo';
+     }
+}  
+
+// para llamar al metodo.
+
+$variable = $objeto->metodo1();
+
+// Se recomienda que las propiedades sean private. Para acceder a ellas se ocupan get y set
+
+class miClase  
+{  
+     private $propiedad1;  
+
+     public function setPropiedad1($valor){
+        
+       $this->propiedad1 = $valor;
+     }
+
+     public function getPropiedad1(){
+
+       return $this->propiedad1;
+     }
+
+     public function metodo1(){
+       
+       // pueden ser public, private, protected.
+       return 'algo';
+     }
+}  
+
+// ' $this ' hace referencia a ' esta ' clase.
+
+
+
+// Por convencion, se recomienda que los nombres de los metodos private comiencen con un guion bajo
+
+class miClase  
+{  
+     private $propiedad1;  
+
+     public function setPropiedad1($valor){
+        
+       $this->propiedad1 = $valor;
+     }
+
+     public function getPropiedad1(){
+
+       return $this->propiedad1;
+     }
+
+     public function metodo1(){
+       
+       return 'algo';
+     }
+     
+     private function _metodo2(){
+       
+       return 'algo';
+     }
+}  
