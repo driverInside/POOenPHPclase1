@@ -111,3 +111,9 @@ class miClase
        return 'algo';
      }
 }  
+
+// Para ver el contenido de una clase o variable se puede utilizar var_dump()
+
+$objeto = new miClase();
+
+var_dump($objeto);
